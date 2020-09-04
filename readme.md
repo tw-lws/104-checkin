@@ -19,7 +19,7 @@
 2. 下載此專案(git clone, 網頁直接下載解壓縮, docker)
 3. 透過命令列介面下(CLI Command):
     ``` npm install ```
-4. 在專案資料夾內新增 records 資料夾
+4. 在專案資料夾內新增 records 資料夾 (注意大小寫)
 5. 將 config 資料夾內的 default.json 的測試帳號修改成你104的帳號密碼(此為範例)
    ```
     "user": {
