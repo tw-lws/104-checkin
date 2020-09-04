@@ -1,0 +1,10 @@
+{
+    "urls": {
+        "login": "https://pro.104.com.tw/user/signin?m=appcenter",
+        "checkin":"https://pro.104.com.tw/psc2"
+    },
+    "user": {
+        "username":"freehk@hongkong.com",
+        "password":"taiwanNo1"
+    }
+}
