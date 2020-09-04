@@ -1,12 +1,13 @@
 const puppeteer = require('puppeteer');
 const config = require('./config/default.json');
-const time = require('./time.js')
+const time = require('./modules/time.js');
 
 (async () => {
     const browser = await puppeteer.launch({
           headless: false,
           defaultViewport: null
     })
+    
     const page = await browser.newPage();
     await page.goto(config.urls.login);
     await page.waitForSelector('#PRO-page-content')
@@ -19,10 +20,15 @@ const time = require('./time.js')
         delay: 100
     })
     await page.click("#submit")
-
+    //進入主頁
     await page.waitFor(10000) 
 
     await page.goto(config.urls.checkin);
+    //進入打卡頁面
+
+
+    await page.waitFor(time.random_secs(600))
+    //等待隨機秒數後打卡(建議超過600秒)
 
     await page.waitFor(3000) 
 
@@ -30,7 +36,7 @@ const time = require('./time.js')
     // ]);
     // console.log($)
     await page.waitFor(2000) 
-    await page.screenshot({path: './records/checkin.png'});
+    await page.screenshot({path: './records/'+time.current_time()+'checkin.png'});
   
     await browser.close();
   })();
