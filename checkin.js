@@ -5,6 +5,7 @@ const time = require('./modules/time.js');
 (async () => {
     const browser = await puppeteer.launch({
           headless: false,
+          //set false to enable brwoser, otherwise it will run in background
           defaultViewport: null
     })
     
@@ -33,10 +34,11 @@ const time = require('./modules/time.js');
     await page.waitFor(3000) 
 
     await page.click('[class="btn btn-white btn-lg btn-block"]')
-    // ]);
-    // console.log($)
+  
+
     await page.waitFor(2000) 
     await page.screenshot({path: './records/'+time.current_time()+'checkin.png'});
+    //打卡之後會做快照到records資料夾內並存有打卡時間
   
     await browser.close();
   })();

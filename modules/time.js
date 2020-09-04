@@ -7,7 +7,7 @@ const current_time = function(){
 // console.log(current_time())
 
 const random_secs = function(max_secs){
-    const secs = Math.floor(Math.random()*max_secs)*1
+    const secs = Math.floor(Math.random()*max_secs)*1000
     return secs;
 }
 // console.log(random_secs(1000))
