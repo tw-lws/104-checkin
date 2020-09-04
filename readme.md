@@ -22,7 +22,7 @@
 4. 將 config 資料夾內的 default.json 的測試帳號修改成你104的帳號密碼(此為範例)
    ```
     "user": {
-        "username":"freehk@hongkong.com",
+        "username":"example@gmail.com",
         "password":"taiwanNo1"
     }
    ```
