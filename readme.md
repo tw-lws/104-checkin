@@ -19,15 +19,16 @@
 2. 下載此專案(git clone, 網頁直接下載解壓縮, docker)
 3. 透過命令列介面下(CLI Command):
     ``` npm install ```
-4. 將 config 資料夾內的 default.json 的測試帳號修改成你104的帳號密碼(此為範例)
+4. 在專案資料夾內新增 records 資料夾
+5. 將 config 資料夾內的 default.json 的測試帳號修改成你104的帳號密碼(此為範例)
    ```
     "user": {
         "username":"example@gmail.com",
         "password":"taiwanNo1"
     }
    ```
-5. 透過命令列介面下(CLI Command): node checkin.js
-6. 檢查 records 資料夾內是否有你的打卡成功紀錄
+6. 透過命令列介面下(CLI Command): node checkin.js
+7. 檢查 records 資料夾內是否有你的打卡成功紀錄
 -----------
 ## 注意事項
 * 建議搭配排程使用
